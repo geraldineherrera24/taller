@@ -40,7 +40,7 @@
             <center>
                 <h1>REPUESTOS</h1>
             </center>
-            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <form id="contact_form" action="Repuestos" method="POST" >
                 <div class="form-group">
                     <label for="formGroupExampleInput">Nombre</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" placeholder="nombres" required size="30">

@@ -125,21 +125,21 @@
                 <center>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="respuestos.html">REPUESTOS   </a>
+                                <a class="nav-link active" href="Repuestos">REPUESTOS   </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">NOSOTROS</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="valorescorporativos.html">VALORES CORPORATIVOS</a>
+                                    <a class="dropdown-item" href="valorescorporativos">VALORES CORPORATIVOS</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="misionyvision.html">MISION Y VISION</a>
+                                    <a class="dropdown-item" href="misionyvision">MISION Y VISION</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="citasdetaller.html">CITAS DE TALLER</a>
+                                <a class="nav-link" href="citasdetaller">CITAS DE TALLER</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="pruebaderuta.html">PRUEBA DE RUTA</a>
+                                <a class="nav-link disabled" href="pruebaderuta">PRUEBA DE RUTA</a>
                             </li>
                         </ul>
                     </center>

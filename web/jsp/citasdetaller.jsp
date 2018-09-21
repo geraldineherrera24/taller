@@ -31,7 +31,7 @@
             <center>
                 <h1>CITA DE TALLER</h1>
             </center>
-            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <form id="contact_form" action="citasdetaller" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Nombre</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" name="nombre" placeholder="nombres">
