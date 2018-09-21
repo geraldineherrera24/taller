@@ -47,3 +47,11 @@ INSERT INTO `taller`.`pruebaderuta` (`nombre`, `apellido`, `email`, `telefono`) 
 
 
 
+CREATE TABLE `taller`.`sede` (
+  `idsede` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  PRIMARY KEY (`idsede`));
+
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('poblado');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('estrella');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('rionegro');
