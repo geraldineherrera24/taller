@@ -6,6 +6,13 @@ package controladores;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,13 +38,17 @@ public class pruebaderuta extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher rd = request.getRequestDispatcher("jsp/pruebaderuta.jsp");
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String email = request.getParameter("email");
+        String telefono = request.getParameter("telefono");
+        guardarpruebaderuta(nombre, apellido, email, telefono);
         rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
-     * Handles the HTTP
-     * <code>GET</code> method.
+     * Handles the HTTP <code>GET</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -51,8 +62,7 @@ public class pruebaderuta extends HttpServlet {
     }
 
     /**
-     * Handles the HTTP
-     * <code>POST</code> method.
+     * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
      * @param response servlet response
@@ -74,4 +84,22 @@ public class pruebaderuta extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void guardarpruebaderuta(String nombre, String apellido, String email, String telefono) {
+        try {
+            System.out.println(nombre + "|separador|" + apellido + "|separador|" + email + "|separador|" + telefono);
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_taller", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("INSERT INTO `pruebaderuta`.`repuestos`.`citasdetaller`(`nombre`, `apellido`,`email`,`telefono`) VALUES (?, ?, ?, ?)");
+            ps.setString(1, nombre);
+            ps.setString(2, apellido);
+            ps.setString(3, email);
+            ps.setString(4, telefono);
+            ps.execute();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(pruebaderuta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(pruebaderuta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
