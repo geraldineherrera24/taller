@@ -55,3 +55,8 @@ CREATE TABLE `taller`.`sede` (
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('poblado');
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('estrella');
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('rionegro');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('envigado');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('sabaneta');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Itagui');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Niquia');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Llanogrande');
