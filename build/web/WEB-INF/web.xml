@@ -29,10 +29,6 @@
         <servlet-class>controladores.valorescorporativos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>repuesto</servlet-name>
-        <servlet-class>controladores.repuesto</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Sedes</servlet-name>
         <servlet-class>controladores.Sedes</servlet-class>
     </servlet>
@@ -63,10 +59,6 @@
     <servlet-mapping>
         <servlet-name>valorescorporativos</servlet-name>
         <url-pattern>/valorescorporativos</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>repuesto</servlet-name>
-        <url-pattern>/repuesto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Sedes</servlet-name>

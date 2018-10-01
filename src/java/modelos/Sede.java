@@ -11,4 +11,5 @@ package modelos;
 public class Sede {
     public int idsede;
     public String nombre;
+    public int id;
 }

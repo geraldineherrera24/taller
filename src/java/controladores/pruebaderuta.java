@@ -11,6 +11,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -18,6 +20,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelos.Sede;
 
 /**
  *
@@ -102,4 +105,28 @@ public class pruebaderuta extends HttpServlet {
             Logger.getLogger(pruebaderuta.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+List<Sede> Sedes() throws SQLException {
+        List<Sede> listaSedes = new ArrayList<Sede>();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_taller", "root", "");
+            PreparedStatement ps = conexion.prepareStatement("SELECT * FROM sede");
+            ResultSet resultados = ps.executeQuery();
+            while(resultados.next()) {
+                int id = resultados.getInt("id");
+                String nombre = resultados.getString("nombre");
+                Sede t = new Sede();
+                t.id = id;
+                t.nombre = nombre;
+                listaSedes.add(t);
+    
+}
+             conexion.close();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(pruebaderuta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(pruebaderuta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaSedes;
+      }
 }
