@@ -60,3 +60,19 @@ INSERT INTO `taller`.`sede` (`nombre`) VALUES ('sabaneta');
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Itagui');
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Niquia');
 INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Llanogrande');
+INSERT INTO `taller`.`sede` (`nombre`) VALUES ('Mall rio 10');
+
+
+ CREATE TABLE `taller`.`serviciodomicilio`(
+  `idserviciodomicilio` INT NOT NULL AUTO_INCREMENT,
+   `valor` VARCHAR(10) NULL);
+   
+   INSERT INTO `taller`.`serviciodomicilio`(`valor`) VALUES ('si');
+   INSERT INTO `taller`.`serviciodomicilio`(`valor`) VALUES ('no');
+ 
+CREATE TABLE `taller`.`duraciontest`(
+`idduraciontest` INT NOT NULL AUTO_INCREMENT,
+ `duracion` VARCHAR(45) NULL);
+ 
+ INSERT INTO `taller`.`duraciontest`(`duracion`) VALUES ('30 minutos');
+   INSERT INTO `taller`.`duraciontest`(`duracion`) VALUES ('1 hora');
